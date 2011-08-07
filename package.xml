@@ -5,8 +5,8 @@
 		<packagename language="de"><![CDATA[Shoutbox WBB]]></packagename>
 		<packagedescription><![CDATA[Integrates the shoutbox into the WBB.]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Integriert die Shoutbox in das WBB.]]></packagedescription>
-		<version>1.0.0</version>
-		<date>2011-05-07</date>
+		<version>1.0.1</version>
+		<date>2011-08-07</date>
 		<plugin>com.woltlab.wbb</plugin>
 	</packageinformation>
 	
@@ -18,7 +18,7 @@
 	<requiredpackages>
 		<requiredpackage minversion="1.1.0 Beta 1">com.woltlab.wcf</requiredpackage>
 		<requiredpackage minversion="2.1.0 Beta 1">com.woltlab.wbb</requiredpackage>
-		<requiredpackage minversion="2.0.0" file="requirements/com.wcfsolutions.wcf.shoutbox.tar">com.wcfsolutions.wcf.shoutbox</requiredpackage>
+		<requiredpackage minversion="2.0.1" file="requirements/com.wcfsolutions.wcf.shoutbox.tar">com.wcfsolutions.wcf.shoutbox</requiredpackage>
 		<requiredpackage minversion="1.0.1" file="requirements/com.wcfsolutions.wbb.index.additionalBottomContents.tar">com.wcfsolutions.wbb.index.additionalBottomContents</requiredpackage>
 	</requiredpackages>
 	
@@ -38,12 +38,8 @@
 		<languages languagecode="en">en.xml</languages>
 	</instructions>
 	
-	<instructions type="update" fromversion="1.0.0 RC 1">
+	<instructions type="update" fromversion="1.0.0">
 		<!-- files -->
-		<files>files.tar</files>
-		<templates>templates.tar</templates>
-		
-		<!-- languages -->
-		<languages languagecode="en">en.xml</languages>		
+		<files>files.tar</files>	
 	</instructions>
 </package>
