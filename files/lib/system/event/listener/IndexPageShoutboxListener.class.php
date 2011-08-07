@@ -4,7 +4,7 @@ require_once(WCF_DIR.'lib/data/shoutbox/ShoutboxEntryFactory.class.php');
 require_once(WCF_DIR.'lib/system/event/EventListener.class.php');
 
 /**
- * Shows the shoutbox on the wbb index page.
+ * Shows the shoutbox on the burning board index page.
  * 
  * @author	Sebastian Oettl
  * @copyright	2009-2011 WCF Solutions <http://www.wcfsolutions.com/index.html>
@@ -23,13 +23,14 @@ class IndexPageShoutboxListener implements EventListener {
 			$factory = new ShoutboxEntryFactory();
 			$factory->init();
 			
-			// get box status
-			$shoutboxBoxStatus = 1;
+			// get status
 			if (WCF::getUser()->userID) {
-				$shoutboxBoxStatus = intval(WCF::getUser()->shoutboxBoxStatus);
+				$status = intval(WCF::getUser()->shoutboxBoxStatus);
 			}
-			else if (WCF::getSession()->getVar('shoutboxBoxStatus') !== null) {
-				$shoutboxBoxStatus = WCF::getSession()->getVar('shoutboxBoxStatus');
+			else {
+				if (($status = WCF::getSession()->getVar('shoutboxBoxStatus')) === null) {
+					$status = 1;
+				}
 			}
 			
 			// register special styles
@@ -39,10 +40,10 @@ class IndexPageShoutboxListener implements EventListener {
 			WCF::getTPL()->assign(array(
 				'smileys' => $factory->getSmileys(),
 				'shoutboxEntries' => $factory->getEntries(),
-				'shoutboxBoxStatus' => $shoutboxBoxStatus,
+				'shoutboxBoxStatus' => $status,
 				'username' => WCF::getSession()->username
 			));
-			WCF::getTPL()->append((INDEX_SHOUTBOX_POSITION == 'top' ? 'additionalTopContents' : 'additionalBottomContents'), WCF::getTPL()->fetch('indexShoutbox'));
+			WCF::getTPL()->append('additional'.ucfirst(INDEX_SHOUTBOX_POSITION).'Contents', WCF::getTPL()->fetch('indexShoutbox'));
 		}
 	}
 }
