@@ -1,0 +1,35 @@
+
+/* ### -- -- -- -- -- Shoutbox WBB Styles -- -- -- -- -- ### */
+
+/* 
+
+File: shoutbox.css 
+Copyright 2009-2011 by WCF Solutions. 
+
+*/
+
+/* ### -- -- -- -- -- General -- -- -- -- -- ### */
+
+#shoutboxEntryAddForm {
+	width: 95%;
+	white-space: nowrap;
+}
+
+#shoutboxContent {
+	height: 175px;
+	overflow: auto;
+}
+
+#shoutboxFormLayout-1 {
+	width: 100%;
+}
+
+#shoutboxFormLayout-2 #shoutboxUsername {
+	width: 15%;
+}
+
+#shoutboxFormLayout-2 #shoutboxMessage {
+	width: 85%;
+}
+
+/* ### -- -- -- -- -- EOF -- -- -- -- -- ### */

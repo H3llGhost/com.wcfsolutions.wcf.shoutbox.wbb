@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/options.xsd">
+	<import>
+		<options>			
+			<option name="index_enable_shoutbox">
+				<categoryname>board.index.general</categoryname>
+				<optiontype>boolean</optiontype>
+				<enableoptions><![CDATA[index_shoutbox_position]]></enableoptions>
+				<defaultvalue>1</defaultvalue>
+			</option>
+			<option name="index_shoutbox_position">
+				<categoryname>board.index.general</categoryname>
+				<optiontype>select</optiontype>
+				<defaultvalue><![CDATA[top]]></defaultvalue>
+				<selectoptions><![CDATA[top:wbb.shoutbox.position.top
+bottom:wbb.shoutbox.position.bottom]]></selectoptions>
+			</option>
+		</options>
+	</import>
+</data>

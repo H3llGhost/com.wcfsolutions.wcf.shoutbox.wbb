@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/language.xsd" languagecode="en">
+	<category name="wbb.shoutbox">
+		<item name="wbb.shoutbox.position.bottom"><![CDATA[Under the forums list]]></item>
+		<item name="wbb.shoutbox.position.top"><![CDATA[Over the forums list]]></item>
+		<item name="wbb.shoutbox.title"><![CDATA[Shoutbox]]></item>
+	</category>
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.index_enable_shoutbox"><![CDATA[Show shoutbox]]></item>
+		<item name="wcf.acp.option.index_enable_shoutbox.description"><![CDATA[Should the shoutbox be displayed on the index page?]]></item>
+		<item name="wcf.acp.option.index_shoutbox_position"><![CDATA[Shoutbox Position]]></item>
+		<item name="wcf.acp.option.index_shoutbox_position.description"><![CDATA[On which position should the shoutbox be displayed?]]></item>
+	</category>
+</language>
